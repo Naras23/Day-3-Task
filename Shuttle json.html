@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shuttle</title>
+  </head>
+  <body>
+    <script>
+      var player = [player1, player2, player3, player4, player5];
+
+      var player1 = {
+        name: 'Viktor Axelsen',
+        game: 'badminton',
+        age: 28,
+        sex: 'male',
+        ranking: 1,
+        nationility: 'danish',
+      };
+      var player2 = {
+        name: ' Kento Momota',
+        game: 'badminton',
+        age: 27,
+        sex: 'male',
+        ranking: 2,
+        nationility: 'japanese',
+      };
+      var player3 = {
+        name: 'Anders Antonsen',
+        game: 'badminton',
+        age: 25,
+        sex: 'male',
+        ranking: 3,
+        nationility: 'danish',
+      };
+      var player4 = {
+        name: 'Chou Tien-chen',
+        game: 'badminton',
+        age: 32,
+        sex: 'male',
+        ranking: 4,
+        nationility: 'taiwan',
+      };
+      var player5 = {
+        name: 'Lee Zii Jia',
+        game: 'badminton',
+        age: 24,
+        sex: 'male',
+        ranking: 5,
+        nationility: 'malaysia',
+      };
+
+      // for loop - The top three rankings
+      var player = [player1, player2, player3, player4, player5];
+      let topPlayers = [];
+      for (let i = 0; i < player.length; i++) {
+        if (player[i].ranking < 4) {
+          topPlayers.push(player[i]);
+        }
+      }
+      console.log(topPlayers);
+
+      // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+      //   for in loop - the players below 25 years old
+      const agedPlayers = [];
+
+      for (const i in player) {
+        if (player[i].age > 25) {
+          agedPlayers.push(player[i].name);
+        }
+      }
+      console.log(agedPlayers);
+
+      // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+      //   for of - The danish nationility players
+
+      const danishPlayers = [];
+      for (const x of player) {
+        if (x.nationility === 'danish') {
+          danishPlayers.push(x.name);
+        }
+      }
+      console.log(danishPlayers);
+
+      // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+      // for each - The players name start with Lee
+
+      const lPlayer = [];
+      player.forEach((x) => {
+        if (x.name.startsWith('Lee')) {
+          lPlayer.push(x.name);
+        }
+      });
+      console.log(lPlayer);
+    </script>
+  </body>
+</html>
