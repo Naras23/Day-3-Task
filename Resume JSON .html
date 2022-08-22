@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RESUME IN JSON FORMAT</title>
+  </head>
+  <body>
+    <script>
+      var resume = {
+        name: 'Sarankumar S',
+        DOB: '23-01-1996',
+        age: 27,
+        emailId: 'sarankumar043@gamil.com',
+        location: 'chennai',
+        religion: 'Hindhu',
+        nationility: 'India',
+        contactNum: 7299514979,
+        course: 'Civil Engineering',
+        workExperience: '2 years',
+        companies:
+          'Chennai Metropolitan Development Authority & Saarathi Construction',
+        intenship: 'AKSHAYA Pvt Ltd',
+        college:
+          'M.Tech - B.S Abdur Rahman Crescent college , B.E - Rajalakshmi Enginnering College',
+        school: 'Sethu Bhasakara Matric Higher Secondary School',
+        technicalSkills:
+          'DESIGN - AutoCAD,ETABS & MS Office- word, excel,powerpoint',
+        softSkills:
+          'Time managemnent,Team work, Problem Solving, Critical thinking',
+        knownLanguage: 'English, Tamil, Hindi',
+      };
+
+      console.log(JSON.stringify( resume));
+      console.log(typeof JSON.stringify( resume));
+    </script>
+  </body>
+</html>
